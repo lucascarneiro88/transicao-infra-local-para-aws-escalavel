@@ -217,6 +217,6 @@ A estimativa de custo pode ser feita com base nos seguintes componentes:
 
 # Conclusão
 
-A modernização para **Kubernetes na AWS** com **Amazon EKS**, **RDS MySQL** e **CloudWatch** permitirá que a **Fast Engineering S/A** escale sua infraestrutura de maneira eficiente, segura e com alta disponibilidade. Com a utilização de **auto scaling**, **load balancers** e ferramentas de segurança como **AWS WAF** e **IAM**, a infraestrutura estará preparada para suportar um tráfego maior, com resiliência e flexibilidade.
+A modernização para Kubernetes na AWS com Amazon EKS, RDS MySQL e CloudWatch permitirá que a Fast Engineering S/A escale sua infraestrutura de maneira eficiente, segura e com alta disponibilidade. Com a utilização de auto scaling, load balancers e ferramentas de segurança como AWS WAF e IAM, a infraestrutura estará preparada para suportar um tráfego maior, com resiliência e flexibilidade.
 
-Além disso, o monitoramento em tempo real através do **CloudWatch**, o uso de backups automáticos e criação de snapshots do **RDS** garantirão que a infraestrutura seja bem mantida, segura e capaz de se recuperar rapidamente de falhas, mantendo a continuidade operacional sem interrupções.
+Além disso, o monitoramento em tempo real através do CloudWatch, o uso de backups automáticos e criação de snapshots do RDS garantirão que a infraestrutura seja bem mantida, segura e capaz de se recuperar rapidamente de falhas, mantendo a continuidade operacional sem interrupções.
