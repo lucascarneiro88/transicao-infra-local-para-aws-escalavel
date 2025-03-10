@@ -100,11 +100,62 @@ Embora a migração **Lift-and-Shift** seja realizada rapidamente, a segurança 
 
 ---
 
-# 4. Custo Estimado na AWS
+### 4. Custo Estimado na AWS
 
-Utilizaremos a **AWS Pricing Calculator** para estimar os custos da infraestrutura na AWS, levando em consideração:
+Abaixo estão os serviços que serão utilizados para migrar e hospedar sua aplicação na AWS, com uma estimativa de custos mensais:
+
+| **Serviço**                          | **Para que serve?**                                                                 | **Custo Estimado (Mensal)** |
+|--------------------------------------|------------------------------------------------------------------------------------|-----------------------------|
+| **AWS Application Migration Service (MGN)** | Faz a migração dos seus servidores atuais para a AWS de forma contínua e segura. | $0.00*                     |
+| **AWS Database Migration Service (DMS)** | Migra o banco de dados da sua aplicação para a AWS com eficiência e baixa latência. | $64.79                     |
+| **Amazon EC2 (Frontend React)**      | Hospeda a parte visual da sua aplicação (Frontend).                                 | $4.40 a $15.18             |
+| **Amazon EC2 (Backend com APIs e Nginx)** | Hospeda a lógica e as funcionalidades da sua aplicação (Backend).               | $12.15 a $30.37            |
+| **Amazon EC2 (Instância Temporária para Migração)** | Uma máquina temporária para ajudar no processo de migração.                  | $63.25                     |
+| **Amazon RDS**                       | Banco de dados gerenciado pela AWS para armazenar os dados da sua aplicação.        | $209.93                    |
+| **AWS IAM**                          | Controla o acesso e a segurança dos recursos na AWS.                                | $0.00**                    |
+| **AWS CloudWatch**                   | Monitora o desempenho e a saúde da sua aplicação na nuvem.                         | $2.10***                   |
+
+**Observações**:  
+- *O **AWS MGN** não tem custo direto, mas durante a migração, podem haver custos adicionais de máquinas e armazenamento.  
+- **O **AWS IAM** é gratuito e essencial para garantir a segurança dos seus recursos.  
+- ***O **AWS CloudWatch** monitora sua aplicação e gera um custo baixo com base no número de métricas analisadas.  
 
 ---
+
+### **Total Estimado dos Custos Mensais**
+
+| **Serviço**                          | **Custo Estimado (Mensal)** |
+|--------------------------------------|-----------------------------|
+| **Migração (AWS MGN)**               | $0.00                       |
+| **Migração do Banco de Dados (AWS DMS)** | $64.79                    |
+| **Hospedagem do Frontend (EC2)**     | $4.40 a $15.18              |
+| **Hospedagem do Backend (EC2)**      | $12.15 a $30.37             |
+| **Instância Temporária para Migração (EC2)** | $63.25                |
+| **Banco de Dados (Amazon RDS)**      | $209.93                     |
+| **Segurança (AWS IAM)**              | $0.00                       |
+| **Monitoramento (AWS CloudWatch)**   | $2.10                       |
+| **Total**                            | **$355.62 a $385.62**       |
+
+---
+
+### **Explicação dos Custos**
+
+1. **Migração**:
+   - O **AWS MGN** não tem custo direto, mas durante a migração, podem haver custos adicionais de máquinas e armazenamento.
+   - O **AWS DMS** é usado para migrar seu banco de dados atual para a AWS e tem um custo fixo de **$64.79/mês**.
+
+2. **Hospedagem**:
+   - O **Frontend** (parte visual da aplicação) será hospedado em uma máquina virtual (EC2) com custo entre **$4.40 e $15.18/mês**.
+   - O **Backend** (lógica e funcionalidades da aplicação) será hospedado em outra máquina virtual (EC2) com custo entre **$12.15 e $30.37/mês**.
+   - Uma **instância temporária** será usada durante a migração, com custo de **$63.25/mês**.
+
+3. **Banco de Dados**:
+   - O **Amazon RDS** é um banco de dados gerenciado pela AWS, com custo fixo de **$209.93/mês**.
+
+4. **Segurança e Monitoramento**:
+   - O **AWS IAM** é gratuito e controla o acesso aos recursos.
+   - O **AWS CloudWatch** monitora o desempenho da aplicação, com custo de **$2.10/mês**.
+
 ---
 ---
 ---
