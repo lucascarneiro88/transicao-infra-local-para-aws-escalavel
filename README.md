@@ -206,16 +206,13 @@ Aqui está o diagrama básico da infraestrutura modernizada na AWS:
 
 A estimativa de custo pode ser feita com base nos seguintes componentes:
 
-- **Amazon EKS:** Custo das instâncias EC2 dos nós e o uso do EKS em si (gerenciamento de clusters).
-- **EC2 (t3.medium):** Custo das instâncias que hospedam os nós do Kubernetes.
-- **RDS MySQL:** Custo das instâncias do banco de dados e volumes de armazenamento.
-- **CloudFront e WAF:** Custo de tráfego e proteção contra ataques.
-- **S3:** Custo com armazenamento de arquivos e backups.
-- **CloudWatch:** Custo de monitoramento, métricas e logs.
-- **Auto Scaling:** Custo adicional com instâncias EC2 ajustadas automaticamente.
-
-Você pode usar o **AWS Pricing Calculator** para obter uma estimativa precisa com base nas configurações de instâncias e volumes esperados.
-
+- **Amazon EKS**: Custo das instâncias EC2 dos nós e o uso do EKS em si (gerenciamento de clusters).
+- **EC2 (t3.medium)**: Custo das instâncias que hospedam os nós do Kubernetes.
+- **RDS MySQL**: Custo das instâncias do banco de dados e volumes de armazenamento.
+- **CloudFront e WAF**: Custo de tráfego e proteção contra ataques.
+- **Amazon S3**: Custo com armazenamento de arquivos e backups.
+- **Amazon CloudWatch**: Custo de monitoramento, métricas e logs.
+- **Auto Scaling**: Custo adicional com instâncias EC2 ajustadas automaticamente.
 ---
 
 # Conclusão
