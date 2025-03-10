@@ -164,17 +164,18 @@ Aqui está o diagrama básico da infraestrutura modernizada na AWS:
 
 ![Imagem diagrama atual da infraestrutura da empresa](img/img-dg-modernizado.png)
 
-1. **Usuários** acessam a aplicação pela internet.
-2. O tráfego é filtrado pelo **AWS WAF** e distribuído via **CloudFront**.
-3. O **Load Balancer** distribui o tráfego para o **Amazon EKS**.
-4. Dentro da **VPC**:
-   - **Subnets Públicas** com os nós EC2 do Amazon EKS.
-   - **Subnets Privadas** contendo o **RDS MySQL** e **Auto Scaling Groups**.
-5. **Auto Scaling Group** ajusta a quantidade de instâncias EC2 dos nós Kubernetes conforme a demanda.
-6. **IAM** gerencia o acesso a recursos na AWS.
-7. **S3** armazena arquivos estáticos e backups.
-8. **CloudWatch** coleta logs, métricas e eventos da infraestrutura.
+# Descrição do Fluxo
 
+- **Acesso dos Usuários**: Os usuários acessam a aplicação pela internet.
+- **Filtragem de Tráfego**: O tráfego é filtrado pelo AWS WAF e distribuído via Amazon CloudFront.
+- **Balanceamento de Carga**: O Load Balancer distribui o tráfego para o Amazon EKS.
+- **Dentro da VPC**:
+  - **Subnets Públicas**: Contêm os nós EC2 do Amazon EKS.
+  - **Subnets Privadas**: Contêm o RDS MySQL e grupos de Auto Scaling.
+- **Auto Scaling**: O Auto Scaling Group ajusta a quantidade de instâncias EC2 dos nós Kubernetes conforme a demanda.
+- **IAM**: Gerencia o acesso a recursos na AWS.
+- **Amazon S3**: Armazena arquivos estáticos e backups.
+- **Amazon CloudWatch**: Coleta logs, métricas e eventos da infraestrutura.
 ---
 
 # Requisitos de Segurança
