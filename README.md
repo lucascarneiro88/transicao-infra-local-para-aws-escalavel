@@ -180,15 +180,12 @@ Aqui está o diagrama básico da infraestrutura modernizada na AWS:
 
 # Requisitos de Segurança
 
-A segurança será garantida através das seguintes práticas:
-
-- **AWS IAM:** Gerenciamento de permissões, garantindo que cada serviço tenha apenas o acesso necessário.
-- **AWS WAF:** Proteção contra ataques à aplicação, como SQL Injection e Cross-Site Scripting (XSS).
-- **Security Groups e NACLs:** Controle de tráfego entre as subnets públicas e privadas, além do tráfego interno da VPC.
-- **Criptografia:** Todos os dados em trânsito e em repouso são criptografados, tanto no RDS MySQL quanto no S3.
-- **CloudWatch:** Monitoramento de logs para detectar e alertar sobre comportamentos suspeitos ou falhas de segurança.
-- **CloudFront:** Proteção adicional para os recursos estáticos, além de fornecer uma camada extra de segurança e desempenho.
-
+- **AWS IAM**: Gerenciamento de permissões, garantindo que cada serviço tenha apenas o acesso necessário.
+- **AWS WAF**: Proteção contra ataques à aplicação, como SQL Injection e Cross-Site Scripting (XSS).
+- **Security Groups e NACLs**: Controle de tráfego entre as subnets públicas e privadas, além do tráfego interno da VPC.
+- **Criptografia**: Todos os dados em trânsito e em repouso são criptografados, tanto no RDS MySQL quanto no S3.
+- **CloudWatch**: Monitoramento de logs para detectar e alertar sobre comportamentos suspeitos ou falhas de segurança.
+- **CloudFront**: Proteção adicional para os recursos estáticos, além de fornecer uma camada extra de segurança e desempenho.
 ---
 
 # Processo de Backup
