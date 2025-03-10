@@ -1,6 +1,7 @@
-# Atividade - DevSecOps - Projeto Final AWS
+ # 🔴  Atividade - DevSecOps - Projeto Final AWS
 
-## Proposta de Migração para AWS – Fast Engineering S/A
+
+## 🟢 Proposta de Migração para AWS – Fast Engineering S/A
 
 ### Empresa executora: TI SOLUÇÕES INCRÍVEIS
 
@@ -11,7 +12,7 @@
 ### Diante desse cenário, a melhor solução é migrar a aplicação para a AWS seguindo um processo em duas fases:
 
 _ _ _ _ _
-### Fase 1 
+###  Fase 1 
  >**Lift-and-Shift (As-Is):**
  >>Migração rápida da infraestrutura atual para a AWS, garantindo continuidade operacional sem grandes mudanças.
 ### Fase 2
@@ -20,7 +21,7 @@ _ _ _ _ _
 
 _ _ _ _ _
 _ _ _ _ _
-# Diagrama da Infraestrutura atual da empresa *Fast Engineering S/A*
+# 🔵 Diagrama da Infraestrutura atual da empresa *Fast Engineering S/A*
 
 ![Imagem diagrama atual da infraestrutura da empresa](img/img-dg-atual.png)
 
@@ -160,7 +161,7 @@ Abaixo estão os serviços que serão utilizados para migrar e hospedar sua apli
 ---
 ---
 
-# **Atividades Necessárias para a Modernização**
+# 🟢 **Atividades Necessárias para a Modernização**
 
 A modernização envolve transformar a infraestrutura já migrada para uma arquitetura mais escalável, eficiente e automatizada. As atividades para essa modernização incluem:
 
@@ -194,7 +195,7 @@ A modernização envolve transformar a infraestrutura já migrada para uma arqui
 
 ---
 
-# Diagrama da Infraestrutura na AWS
+# 🔵 Diagrama da Infraestrutura na AWS
 
 Aqui está o diagrama básico da infraestrutura modernizada na AWS:
 
