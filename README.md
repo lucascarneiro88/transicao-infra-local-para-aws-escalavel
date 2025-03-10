@@ -162,7 +162,7 @@ As ferramentas específicas para a modernização são:
 
 Aqui está o diagrama básico da infraestrutura modernizada na AWS:
 
-![Imagem diagrama atual da infraestrutura da empresa](img/img-dg-novo.png)
+![Imagem diagrama atual da infraestrutura da empresa](img/img-dg-modernizado.png)
 
 1. **Usuários** acessam a aplicação pela internet.
 2. O tráfego é filtrado pelo **AWS WAF** e distribuído via **CloudFront**.
