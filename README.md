@@ -190,20 +190,15 @@ Aqui está o diagrama básico da infraestrutura modernizada na AWS:
 
 # Processo de Backup
 
-O processo de backup será realizado conforme os seguintes pontos:
-
-## 1. RDS MySQL
-- Backup automático diário utilizando **RDS snapshots**.
-- Backups manuais serão feitos conforme a necessidade.
-
-## 2. S3
-- Armazenamento de backups de arquivos estáticos e logs.
-
-## 3. CloudWatch Logs
-- Monitoramento contínuo e armazenamento de logs para auditoria e recuperação de falhas.
-
-## 4. AWS Backup
-- Ferramenta para automação do backup de recursos em toda a infraestrutura, incluindo RDS e EFS (se necessário).
+1. **RDS MySQL**:
+   - Backup automático diário utilizando RDS snapshots.
+   - Backups manuais serão feitos conforme a necessidade.
+2. **Amazon S3**:
+   - Armazenamento de backups de arquivos estáticos e logs.
+3. **Amazon CloudWatch Logs**:
+   - Monitoramento contínuo e armazenamento de logs para auditoria e recuperação de falhas.
+4. **AWS Backup**:
+   - Ferramenta para automação do backup de recursos em toda a infraestrutura, incluindo RDS e EFS (se necessário).
 
 ---
 
