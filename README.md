@@ -104,9 +104,12 @@ Embora a migração **Lift-and-Shift** seja realizada rapidamente, a segurança 
 
 Utilizaremos a **AWS Pricing Calculator** para estimar os custos da infraestrutura na AWS, levando em consideração:
 
+---
+---
+---
+---
 
-
-# Atividades Necessárias para a Modernização
+# **Atividades Necessárias para a Modernização**
 
 A modernização envolve transformar a infraestrutura já migrada para uma arquitetura mais escalável, eficiente e automatizada. As atividades para essa modernização incluem:
 
