@@ -64,8 +64,6 @@ Para realizar a migração Lift-and-Shift, seguiremos estas etapas:
 
 ## 2.2. Ferramentas Utilizadas
 
-## 2.2. Ferramentas Utilizadas
-
 | **Serviço**         | **Finalidade**                                                                 |
 |---------------------|--------------------------------------------------------------------------------|
 | **AWS MGN**         | Replicação contínua e migração dos servidores                                  |
@@ -138,23 +136,7 @@ A modernização envolve transformar a infraestrutura já migrada para uma arqui
 
 ---
 
-# Ferramentas Utilizadas
 
-As ferramentas específicas para a modernização são:
-
-| **Ferramenta**               | **Finalidade**                                                                 |
-|-------------------------------|--------------------------------------------------------------------------------|
-| **Amazon EKS**                | Orquestrar e gerenciar os containers da aplicação.                             |
-| **AWS WAF**                   | Proteger a aplicação contra ataques comuns, como SQL Injection e XSS.          |
-| **AWS CloudFront**            | Distribuição de conteúdo (CDN), melhorando a performance e segurança.          |
-| **Load Balancer (ELB)**       | Distribuir o tráfego de forma eficiente entre os pods e EC2s.                  |
-| **Amazon EC2**                | Hospedagem dos nós do Kubernetes no Amazon EKS (instâncias t3).                |
-| **RDS MySQL**                 | Banco de dados MySQL gerenciado pela AWS, configurado nas subnets privadas.    |
-| **Network ACLs e Security Groups** | Controle de tráfego e permissões de rede.                                |
-| **S3**                        | Armazenamento de arquivos estáticos e backups.                                 |
-| **AWS IAM**                   | Controle de permissões e acesso aos recursos da AWS.                           |
-| **CloudWatch**                | Monitoramento, logs e métricas da infraestrutura.                              |
-| **Auto Scaling**              | Ajuste automático das instâncias EC2 conforme a demanda de tráfego.            |
 
 ---
 
@@ -201,6 +183,26 @@ Aqui está o diagrama básico da infraestrutura modernizada na AWS:
    - Ferramenta para automação do backup de recursos em toda a infraestrutura, incluindo RDS e EFS (se necessário).
 
 ---
+
+# Ferramentas Utilizadas
+
+As ferramentas específicas para a modernização são:
+
+| **Ferramenta**               | **Finalidade**                                                                 |
+|-------------------------------|--------------------------------------------------------------------------------|
+| **Amazon EKS**                | Orquestrar e gerenciar os containers da aplicação.                             |
+| **AWS WAF**                   | Proteger a aplicação contra ataques comuns, como SQL Injection e XSS.          |
+| **Amazon CloudFront**         | Distribuição de conteúdo (CDN), melhorando a performance e segurança.          |
+| **Load Balancer (ELB)**       | Distribuir o tráfego de forma eficiente entre os pods e EC2s.                  |
+| **Amazon EC2**                | Hospedagem dos nós do Kubernetes no Amazon EKS (instâncias t3.medium).         |
+| **RDS MySQL**                 | Banco de dados MySQL gerenciado pela AWS, configurado nas subnets privadas.    |
+| **Network ACLs e Security Groups** | Controle de tráfego e permissões de rede.                                |
+| **Amazon S3**                 | Armazenamento de arquivos estáticos e backups.                                 |
+| **AWS IAM**                   | Controle de permissões e acesso aos recursos da AWS.                           |
+| **Amazon CloudWatch**         | Monitoramento, logs e métricas da infraestrutura.                              |
+| **Auto Scaling**              | Ajuste automático das instâncias EC2 conforme a demanda de tráfego.            |
+| **AWS Backup**                | Automação do backup de recursos em toda a infraestrutura, incluindo RDS e EFS. |
+| **AWS EFS (se necessário)**   | Armazenamento de arquivos compartilhados para aplicações que exigem EFS.       |
 
 # Custo da Infraestrutura na AWS (AWS Calculator)
 
