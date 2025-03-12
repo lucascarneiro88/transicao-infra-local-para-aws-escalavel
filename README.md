@@ -105,21 +105,7 @@ Embora a migração **Lift-and-Shift** seja realizada rapidamente, a segurança 
 
 Abaixo estão os serviços que serão utilizados para migrar e hospedar sua aplicação na AWS, com uma estimativa de custos mensais:
 
-| **Serviço**                          | **Para que serve?**                                                                 | **Custo Estimado (Mensal)** |
-|--------------------------------------|------------------------------------------------------------------------------------|-----------------------------|
-| **AWS Application Migration Service (MGN)** | Faz a migração dos seus servidores atuais para a AWS de forma contínua e segura. | $0.00*                     |
-| **AWS Database Migration Service (DMS)** | Migra o banco de dados da sua aplicação para a AWS com eficiência e baixa latência. | $64.79                     |
-| **Amazon EC2 (Frontend React)**      | Hospeda a parte visual da sua aplicação (Frontend).                                 | $4.40 a $15.18             |
-| **Amazon EC2 (Backend com APIs e Nginx)** | Hospeda a lógica e as funcionalidades da sua aplicação (Backend).               | $12.15 a $30.37            |
-| **Amazon EC2 (Instância Temporária para Migração)** | Uma máquina temporária para ajudar no processo de migração.                  | $63.25                     |
-| **Amazon RDS**                       | Banco de dados gerenciado pela AWS para armazenar os dados da sua aplicação.        | $209.93                    |
-| **AWS IAM**                          | Controla o acesso e a segurança dos recursos na AWS.                                | $0.00**                    |
-| **AWS CloudWatch**                   | Monitora o desempenho e a saúde da sua aplicação na nuvem.                         | $2.10***                   |
-
-**Observações**:  
-- *O **AWS MGN** não tem custo direto, mas durante a migração, podem haver custos adicionais de máquinas e armazenamento.  
-- **O **AWS IAM** é gratuito e essencial para garantir a segurança dos seus recursos.  
-- ***O **AWS CloudWatch** monitora sua aplicação e gera um custo baixo com base no número de métricas analisadas.  
+![Imagemde estimativade custo migração infra para  aws ](img/img-estimativa-aws-infra-atual.png)
 
 ---
 
@@ -136,6 +122,13 @@ Abaixo estão os serviços que serão utilizados para migrar e hospedar sua apli
 | **Segurança (AWS IAM)**              | $0.00                       |
 | **Monitoramento (AWS CloudWatch)**   | $2.10                       |
 | **Total**                            | **$355.62 a $385.62**       |
+
+
+### Custo Anual Estimado
+
+| **Custo Mensal** | **Custo Anual (12 meses)** |
+|------------------|----------------------------|
+| **$355.62**      | $355.62 x 12 = **$4.267,44** |
 
 ---
 
