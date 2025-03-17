@@ -112,14 +112,7 @@ Abaixo estão os serviços que serão utilizados para migrar e hospedar sua apli
 
    Custo Total Mensal: $936.41 USD.
 
----
 
-### **Explicação dos Custos**
-
-
-
----
----
 ---
 
 # 🟢 **Atividades Necessárias para a Modernização**
