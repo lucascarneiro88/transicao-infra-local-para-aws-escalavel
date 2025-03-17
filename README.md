@@ -65,20 +65,20 @@ Para realizar a migração Lift-and-Shift, seguiremos estas etapas:
 
 ## 2.2. Ferramentas Utilizadas
 
-| **Serviço**         | **Finalidade**                                                                 |
-|---------------------|--------------------------------------------------------------------------------|
-| **AWS MGN**         | Replicação contínua e migração dos servidores                                  |
-| **AWS DMS**         | Migração eficiente e com baixa latência de dados de banco de dados             |
-| **Amazon EC2**      | Hospedagem das máquinas migradas                                              |
-| **Amazon RDS**      | Banco de dados gerenciado, dependendo do setup atual                           |
-| **AWS IAM**         | Controle de acesso e segurança                                                |
-| **AWS CloudWatch**  | Monitoramento da infraestrutura                                               |
+
+- AWS EC2 para servidores.
+- Amazon RDS para banco de dados.
+- AWS Elastic Load Balancer (ELB) para balanceamento de carga.
+- Amazon MGN para Migração de dados
+- Amazon DMS para migração de banco de dados.
+
 
 ---
 
 # 2.3  Controle de Segurança Básico para a Migração
 
 A migração será realizada com o seguinte controle de segurança básico para garantir a proteção da infraestrutura:
+
 
 ##  A VPC de Staging
 
@@ -91,64 +91,34 @@ A migração será realizada com o seguinte controle de segurança básico para 
 ##  Security Groups
 - Configuração de **Security Groups** para permitir o tráfego de rede apenas entre os recursos autorizados, como servidores backend, frontend e banco de dados.
 
+- Grupos de segurança incluindo as portas 443 (HTTPS), 1500 (MGN), (3306) MySQL
 
 # 3. Processo de Backup
 
-Embora a migração **Lift-and-Shift** seja realizada rapidamente, a segurança dos dados será priorizada com um processo de backup básico:
+Embora a migração **Lift-and-Shift** seja realizada rapidamente, a segurança dos dados será priorizada com um processo de backup :
 
-## Armazenamento no Amazon S3
-- Apenas dados críticos e não voláteis serão armazenados no Amazon S3, de forma otimizada, para garantir segurança e disponibilidade, sem custos elevados de armazenamento.
+- AWS Backup configurado para snapshots regulares.
+- Replicação do banco de dados em múltiplas zonas de disponibilidade (Multi-AZ).
 
----
+
 
 ### 4. Custo Estimado na AWS
 
 Abaixo estão os serviços que serão utilizados para migrar e hospedar sua aplicação na AWS, com uma estimativa de custos mensais:
 
-![Imagemde estimativade custo migração infra para  aws ](img/img-estimativa-aws-infra-atual.png)
+![Imagemde estimativade custo migração infra para  aws ](img/img-custos-migração.png)
 
 ---
 
 ### **Total Estimado dos Custos Mensais**
 
-| **Serviço**                          | **Custo Estimado (Mensal)** |
-|--------------------------------------|-----------------------------|
-| **Migração (AWS MGN)**               | $0.00                       |
-| **Migração do Banco de Dados (AWS DMS)** | $64.79                    |
-| **Hospedagem do Frontend (EC2)**     | $4.40 a $15.18              |
-| **Hospedagem do Backend (EC2)**      | $12.15 a $30.37             |
-| **Instância Temporária para Migração (EC2)** | $63.25                |
-| **Banco de Dados (Amazon RDS)**      | $209.93                     |
-| **Segurança (AWS IAM)**              | $0.00                       |
-| **Monitoramento (AWS CloudWatch)**   | $2.10                       |
-| **Total**                            | **$355.62 a $385.62**       |
 
-
-### Custo Anual Estimado
-
-| **Custo Mensal** | **Custo Anual (12 meses)** |
-|------------------|----------------------------|
-| **$355.62**      | $355.62 x 12 = **$4.267,44** |
 
 ---
 
 ### **Explicação dos Custos**
 
-1. **Migração**:
-   - O **AWS MGN** não tem custo direto, mas durante a migração, podem haver custos adicionais de máquinas e armazenamento.
-   - O **AWS DMS** é usado para migrar seu banco de dados atual para a AWS e tem um custo fixo de **$64.79/mês**.
 
-2. **Hospedagem**:
-   - O **Frontend** (parte visual da aplicação) será hospedado em uma máquina virtual (EC2) com custo entre **$4.40 e $15.18/mês**.
-   - O **Backend** (lógica e funcionalidades da aplicação) será hospedado em outra máquina virtual (EC2) com custo entre **$12.15 e $30.37/mês**.
-   - Uma **instância temporária** será usada durante a migração, com custo de **$63.25/mês**.
-
-3. **Banco de Dados**:
-   - O **Amazon RDS** é um banco de dados gerenciado pela AWS, com custo fixo de **$209.93/mês**.
-
-4. **Segurança e Monitoramento**:
-   - O **AWS IAM** é gratuito e controla o acesso aos recursos.
-   - O **AWS CloudWatch** monitora o desempenho da aplicação, com custo de **$2.10/mês**.
 
 ---
 ---
