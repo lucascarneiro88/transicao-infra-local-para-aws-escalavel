@@ -97,8 +97,6 @@ A migração será realizada com o seguinte controle de segurança básico para 
 
 Embora a migração **Lift-and-Shift** seja realizada rapidamente, a segurança dos dados será priorizada com um processo de backup :
 
-- AWS Backup configurado para snapshots regulares.
-- Replicação do banco de dados em múltiplas zonas de disponibilidade (Multi-AZ).
 
 
 
@@ -206,33 +204,9 @@ Aqui está o diagrama básico da infraestrutura modernizada na AWS:
 
 As ferramentas específicas para a modernização são:
 
-| **Ferramenta**               | **Finalidade**                                                                 |
-|-------------------------------|--------------------------------------------------------------------------------|
-| **Amazon EKS**                | Orquestrar e gerenciar os containers da aplicação.                             |
-| **AWS WAF**                   | Proteger a aplicação contra ataques comuns, como SQL Injection e XSS.          |
-| **Amazon CloudFront**         | Distribuição de conteúdo (CDN), melhorando a performance e segurança.          |
-| **Load Balancer (ELB)**       | Distribuir o tráfego de forma eficiente entre os pods e EC2s.                  |
-| **Amazon EC2**                | Hospedagem dos nós do Kubernetes no Amazon EKS (instâncias t3.medium).         |
-| **RDS MySQL**                 | Banco de dados MySQL gerenciado pela AWS, configurado nas subnets privadas.    |
-| **Network ACLs e Security Groups** | Controle de tráfego e permissões de rede.                                |
-| **Amazon S3**                 | Armazenamento de arquivos estáticos e backups.                                 |
-| **AWS IAM**                   | Controle de permissões e acesso aos recursos da AWS.                           |
-| **Amazon CloudWatch**         | Monitoramento, logs e métricas da infraestrutura.                              |
-| **Auto Scaling**              | Ajuste automático das instâncias EC2 conforme a demanda de tráfego.            |
-| **AWS Backup**                | Automação do backup de recursos em toda a infraestrutura, incluindo RDS e EFS. |
-| **AWS EFS (se necessário)**   | Armazenamento de arquivos compartilhados para aplicações que exigem EFS.       |
 
 # Custo da Infraestrutura na AWS (AWS Calculator)
 
-A estimativa de custo pode ser feita com base nos seguintes componentes:
-
-- **Amazon EKS**: Custo das instâncias EC2 dos nós e o uso do EKS em si (gerenciamento de clusters).
-- **EC2 (t3.medium)**: Custo das instâncias que hospedam os nós do Kubernetes.
-- **RDS MySQL**: Custo das instâncias do banco de dados e volumes de armazenamento.
-- **CloudFront e WAF**: Custo de tráfego e proteção contra ataques.
-- **Amazon S3**: Custo com armazenamento de arquivos e backups.
-- **Amazon CloudWatch**: Custo de monitoramento, métricas e logs.
-- **Auto Scaling**: Custo adicional com instâncias EC2 ajustadas automaticamente.
 ---
 
 # Conclusão
