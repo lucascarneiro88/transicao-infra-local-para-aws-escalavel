@@ -25,6 +25,9 @@ _ _ _ _ _
 
 ![Imagem diagrama atual da infraestrutura da empresa](img/img-dg-atual.png)
 
+
+
+
 ## Fase 1: Lift-and-Shift – Migração As-Is
  Nosso foco nesta etapa é garantir uma transição rápida e segura da aplicação para a AWS, utilizando os serviços 
 
@@ -113,6 +116,8 @@ Abaixo estão os serviços que serão utilizados para migrar e hospedar sua apli
    Custo Total Mensal: $936.41 USD.
 
 
+# 🔵 **Diagrama da Infraestrutura na AWS**
+![Imagem diagrama migração](img/img-diagrama-migracao.png)
 ---
 
 # 🟢 **Atividades Necessárias para a Modernização**
