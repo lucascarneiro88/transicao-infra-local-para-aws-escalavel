@@ -110,7 +110,7 @@ Abaixo estão os serviços que serão utilizados para migrar e hospedar sua apli
 
 ### **Total Estimado dos Custos Mensais**
 
-   Custo Total Mensal: $833.36 USD.
+   Custo Total Mensal: $936.41 USD.
 
 ---
 
