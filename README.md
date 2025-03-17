@@ -99,6 +99,8 @@ Embora a migração **Lift-and-Shift** seja realizada rapidamente, a segurança 
 ## Armazenamento no Amazon S3
 - Apenas dados críticos e não voláteis serão armazenados no Amazon S3, de forma otimizada, para garantir segurança e disponibilidade, sem custos elevados de armazenamento.
 
+![Imagem diagrama processo migração](img/img-diagrama-migracao.png)
+
 ---
 
 ### 4. Custo Estimado na AWS
